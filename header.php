@@ -1,5 +1,8 @@
 <?php get_template_part( 'head' ); ?>
-
+<div class="svg-wrap" style="position: absolute;top: -9999px;left: -9999px;width: 0;height: 0;overflow: hidden;">
+	<?php require_once __DIR__ . '/assets/images/icons.svg'; ?>
+</div>
+<!-- /.svg-wrap -->
 <?php get_template_part( 'partials/navbar', 'mobile' ); ?>
 
 
@@ -24,7 +27,6 @@
 
 	<?php do_action( 'hb_header_content_end' ); ?>
 
-
 	<?php do_action( 'hb_header_end' ); ?>
 
 
@@ -48,4 +50,4 @@
 		<?php do_action( 'hb_before_main_content' ); ?>
 
 		<main id="content">
-			<h1><?php the_icon(''); ?></h1>
+			<h1><?php the_icon( '' ); ?></h1>

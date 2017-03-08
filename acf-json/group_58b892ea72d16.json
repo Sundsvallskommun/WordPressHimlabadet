@@ -62,12 +62,12 @@
                     },
                     "choices": {
                         "marker": "Kartn\u00e5l",
-                        "phone": "Telefon",
-                        "mailoutline": "Brev \/ mail",
+                      "telephone": "Telefon",
+                      "mail": "Brev \/ mail",
                         "facebook": "Facebook"
                     },
                     "default_value": [],
-                    "allow_null": 0,
+                  "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
                     "ajax": 0,
@@ -235,7 +235,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+  "active": 0,
     "description": "",
-    "modified": 1488527323
+  "modified": 1488974030
 }

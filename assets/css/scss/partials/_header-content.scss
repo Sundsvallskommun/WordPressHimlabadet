@@ -40,7 +40,11 @@
 	font-size: 4.5rem;
 	font-weight: bold;
   }
-
+  &__content {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.55;
+  }
   &__card {
 	background: rgba(#0A2036, .4);
 	padding-bottom: 1.5rem;

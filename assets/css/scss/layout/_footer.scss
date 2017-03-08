@@ -1,5 +1,11 @@
 .site-footer {
   background-color: white;
+  padding-bottom: 6rem;
+  color: hb-color(blue, 3);
+
+  .logo-container {
+	display: block;
+  }
 
   &__upper {
 	padding: 3rem 0;
@@ -7,6 +13,27 @@
 
   .menu-item a {
 	text-decoration: none;
+	&:hover {
+	  text-decoration: underline;
+	}
+  }
+
+  &__below {
+	.row + .row {
+	  margin-top: 3.4rem;
+	}
+  }
+
+  .link {
+	margin-bottom: 1rem;
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: none;
+	color: hb-color(blue, 3);
+	.icon {
+	  display: inline-block;
+	  margin-right: 1rem;
+	}
 	&:hover {
 	  text-decoration: underline;
 	}

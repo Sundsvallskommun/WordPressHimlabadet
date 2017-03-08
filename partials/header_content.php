@@ -2,7 +2,10 @@
 	<aside class="header-content__aside">
 		<h6 class="header-content__pre-title">Norrlands bästa badhus</h6>
 		<h1 class="header-content__large-title">Där trä, eld och vatten möts</h1>
-		<p></p>
+		<div class="header-content__content">
+			<p>Himlabadets relax ligger på översta våningen med två terrasser mot Selångersån, en inglasad och en solterrass med bubbelpool.</p>
+			<p>Här kan du bada bastu av olika slag (aufguss, het-, vedeldad och ångbastu) Dessutom finns varmpool, kallpool, upplevelsedusch och ytor för avslappning.</p>
+		</div>
 	</aside>
 	<aside class="header-content__aside col-sm-6">
 		<div class="card header-content__card">
