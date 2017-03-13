@@ -10,7 +10,7 @@
   &__inner-container {
 	position: relative;
 	width: 100%;
-	padding: 2rem 0; // 2.5
+	padding: 4rem 0; // 2.5
 
 	background-color: transparent;
 	background-image: url('../images/header.svg');
@@ -37,7 +37,18 @@
   }
 
   .logo-container {
-	max-width: 17.625rem; // + ~1rem padding each side
+	//max-width: 17.625rem; // + ~1rem padding each side
+	.custom-logo-link {
+	  display: block;
+	}
+	.custom-logo {
+	  width: 100%;
+	  max-width: 100%;
+	}
   }
 
+}
+
+.navbar {
+  margin: 1rem 0;
 }

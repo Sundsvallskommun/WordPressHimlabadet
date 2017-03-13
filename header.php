@@ -1,4 +1,5 @@
 <?php get_template_part( 'head' ); ?>
+<div class="screen"></div>
 <div class="svg-wrap" style="position: absolute;top: -9999px;left: -9999px;width: 0;height: 0;overflow: hidden;">
 	<?php require_once __DIR__ . '/assets/images/icons.svg'; ?>
 </div>
@@ -7,16 +8,20 @@
 
 
 <?php $background_image = wp_get_attachment_image_url( get_field( 'top_image' ), 'full' ); ?>
+<?php $background_color = get_field( 'header_background_color' ) ? "background-image--" . get_field( 'header_background_color' ) : ''; ?>
+<?php $background_classes = ( $background_image ) ? 'background-image--tone ' . $background_color : $background_color; ?>
 <header class="site-header himlabadet-header">
 	<?php if ( $background_image ): ?>
-		<div class="<?php echo 'background-image'; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div> <!-- background-image--gradiented -->
+		<div class="background-image <?php echo $background_classes; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div>
 	<?php endif; ?>
 	<div class="container himlabadet-header__inner-container">
 		<div class="row">
 			<?php $has_logo = function_exists( 'the_custom_logo' ) && has_custom_logo(); ?>
-			<div class="logo-container <?php echo $has_logo ? 'haslogo' : '' ?>">
+			<div class="col-sm-3 logo-container <?php echo $has_logo ? 'haslogo' : '' ?>">
 				<h1><?php get_template_part( 'partials/site-logo' ); ?></h1>
 			</div>
+
+			<?php get_template_part( 'partials/site-navigation', 'offcanvas' ); ?>
 		</div>
 	</div>
 
@@ -32,17 +37,6 @@
 
 </header>
 
-<?php do_action( 'hb_before_main_navigation' ); ?>
-
-<div class="container">
-	<div class="row">
-		<?php get_template_part( 'partials/site-navigation', 'offcanvas' ); ?>
-	</div>
-	<!-- /.row -->
-</div>
-<!-- /.container -->
-
-<?php do_action( 'hb_after_main_navigation' ); ?>
 
 <div class="contentwrapper-outer"> <?php // Wrappers used by off-canvas mobile navigation ?>
 	<div class="contentwrapper-inner"> <?php // Wrappers used by off-canvas mobile navigation ?>

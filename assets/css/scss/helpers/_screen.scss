@@ -1,0 +1,38 @@
+
+.screen {
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  width: 15em;
+  margin: auto;
+  z-index: 9999;
+
+  &:before {
+	transition: background .2s ease-out;
+	display: block;
+	padding: .5em;
+	color: #fff;
+
+	@media (min-width: hb-breakpoints(xs)) {
+	  background: rgba(125, 0, 0, .8);
+	  content: 'col-xs'
+	}
+
+	@media (min-width: hb-breakpoints(sm)) {
+	  background: rgba(125, 125, 0, .8);
+	  content: 'col-sm'
+	}
+
+	@media (min-width: hb-breakpoints(md)) {
+	  background: rgba(0, 0, 125, .8);
+	  content: 'col-md'
+	}
+
+	@media (min-width: hb-breakpoints(lg)) {
+	  background: rgba(125, 0, 125, .8);
+	  content: 'col-lg'
+	}
+
+  }
+}

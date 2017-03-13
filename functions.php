@@ -1,9 +1,6 @@
 <?php
 global $sk_search;
 define( '__LIB_PATH__', __DIR__ . '/lib' );
-//require_once get_parent_theme_file_path( 'functions.php' );
-//include_once __LIB_PATH__ . '/sk-search/extra_class-sk-search.php';
-//$sk_search = new HB_Search();
 
 
 add_action( 'after_setup_theme', 'mega_test', 50 );
@@ -175,4 +172,30 @@ function get_international_phone_number( $phone_number = '', $country_code = '+4
 }
 
 
+/**
+ * Function get_current_template
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param bool $echo
+ *
+ * @return bool|mixed
+ *
+ */
+function get_current_template( $echo = false ) {
+	if ( ! isset( $GLOBALS['current_theme_template'] ) ) {
+		trigger_error( '$current_theme_template has not been defined yet', E_USER_WARNING );
 
+		return false;
+	}
+
+	$current_theme_template = $GLOBALS['current_theme_template'];
+
+	if ( $echo ) {
+		echo $current_theme_template;
+
+		return true;
+	} else {
+		return $current_theme_template;
+	}
+}

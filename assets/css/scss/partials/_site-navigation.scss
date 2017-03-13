@@ -1,4 +1,3 @@
-$navbar-height: 7rem;
 
 .site-header {
   font-family: $font-family-base;
@@ -6,22 +5,9 @@ $navbar-height: 7rem;
 }
 
 @media (min-width: 768px) {
-
-  .hm-navigation {
-	position: relative;
-	z-index: 50;
-	height: $navbar-height / 2;
-  }
-
   .navbar {
-	height: $navbar-height;
-	position: absolute;
-	top: - ($navbar-height + 1.25rem) / 2;
-	background-color: white;
 	display: flex;
 	flex-flow: row nowrap;
-	border-radius: 15px;
-	padding: 0 2.5rem;
 
 	&__menu {
 	  flex: 1 1 auto;

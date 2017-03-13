@@ -22,3 +22,36 @@ h5.card-title {
 	padding: 2.75rem;
   }
 }
+
+.card {
+  &--blue {
+	background-color: hb-color(blue, 3);
+	&.card--transparent {
+	  background-color: rgba(hb-color(blue, 3), .2);
+	}
+  }
+
+  &--green {
+	background-color: hb-color(green, 2);
+	&.card--transparent {
+	  background-color: rgba(hb-color(green, 2), .2);
+	}
+  }
+
+  &--orange {
+	background-color: hb-color(orange, 1);
+
+	&.card--transparent {
+	  background-color: rgba(hb-color(orange, 1), .2);
+	}
+  }
+
+  &--transparent {
+	background-color: rgba(black, .2);
+
+	.btn-primary {
+	  color: white;
+	}
+  }
+
+}
