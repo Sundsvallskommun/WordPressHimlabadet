@@ -8,7 +8,7 @@ sk_header();
 <?php while ( have_posts() ) : the_post(); ?>
 
 
-	<div class="container">
+	<div class="container card">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="card">

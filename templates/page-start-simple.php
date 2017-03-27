@@ -11,7 +11,7 @@
 
 <div style="overflow: hidden;"> <?php //Fix for IE11, service-messages caused horizontal scrollbar ?>
 
-	<div class="container-fluid">
+	<div class="container card">
 
 		<div class="row content-news-row">
 

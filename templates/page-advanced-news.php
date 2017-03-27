@@ -5,7 +5,7 @@
 ?>
 <?php sk_header(); ?>
 
-<div class="container-fluid archive">
+<div class="container archive card">
 
 	<h1 class="archive__title"><?php the_title(); ?></h1>
 

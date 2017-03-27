@@ -7,7 +7,7 @@ $sections = SK_Blocks::get_sections();
 get_header();
 ?>
 <?php //get_template_part( 'partials/front-page/operation-messages' ); ?>
-	<div class="container-fluid sections">
+	<div class="container-fluid sections card">
 
 		<?php foreach ( $sections as $section ) : ?>
 			<div class="row blocks<?php SK_Blocks::is_grid_border( $section ); ?>">

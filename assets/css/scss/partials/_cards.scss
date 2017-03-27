@@ -13,6 +13,14 @@ h5.card-title {
 .card-block {
   padding: 1.5rem;
 
+  @include media-breakpoint-down(md) {
+	padding: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+	padding: 1rem .75rem;
+  }
+
   &--small-y-padding {
 	padding-top: 1rem;
 	padding-bottom: 1rem;

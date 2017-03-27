@@ -189,7 +189,7 @@ class SK_Blocks_Public {
 					<div class="block-image-and-text__content"><?php echo $content; ?></div>
 					<?php if ( ! empty( $link ) ) : ?>
 						<div class="block-image-and-text__link">
-							<a href="<?php echo $link; ?>" class="btn"><?php echo sprintf( __( 'Läs mer om %s', 'sk-tivoli' ), strtolower( $link_title ) ); ?></a>
+							<a href="<?php echo $link; ?>" class="btn text-overflow"><?php echo sprintf( __( 'Läs mer om %s', 'sk-tivoli' ), strtolower( $link_title ) ); ?></a>
 						</div>
 					<?php endif; ?>
 				</div>

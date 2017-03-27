@@ -19,8 +19,7 @@
 	.block-image-and-text__image {
 	  order: 2;
 	  @include media-breakpoint-down('md') {
-
-		order: 1;
+		order: initial;
 	  }
 	}
 
@@ -42,14 +41,20 @@
   }
   &__footer {
 	flex: 1 1 auto;
+	width: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 2em;
   }
 
   .btn {
+	margin-top: 2rem;
 	background-color: rgba(0, 0, 0, .1);
+	@include media-breakpoint-down(sm) {
+	  font-size: .8em;
+	}
   }
+
 }
 
 @media (max-width: 767px) {
