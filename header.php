@@ -1,17 +1,18 @@
 <?php get_template_part( 'head' ); ?>
-<div class="screen"></div>
+<?php if ( WP_DEBUG ): ?>
+	<div class="screen"></div>
+<?php endif; ?>
 <div class="svg-wrap" style="position: absolute;top: -9999px;left: -9999px;width: 0;height: 0;overflow: hidden;">
 	<?php require_once __DIR__ . '/assets/images/icons.svg'; ?>
 </div>
 <!-- /.svg-wrap -->
 <?php get_template_part( 'partials/navbar', 'mobile' ); ?>
-
-
+<?php $is_startpage = ( get_current_template() === 'page-start-advanced' ); ?>
 <?php $background_image = wp_get_attachment_image_url( get_field( 'top_image' ), 'full' ); ?>
 <?php $background_color = get_field( 'header_background_color' ) ? "background-image--" . get_field( 'header_background_color' ) : ''; ?>
 <?php $background_classes = ( $background_image ) ? 'background-image--tone ' . $background_color : $background_color; ?>
 <header class="site-header himlabadet-header">
-	<?php if ( $background_image ): ?>
+	<?php if ( $background_image && $is_startpage ): ?>
 		<div class="background-image <?php echo $background_classes; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div>
 	<?php endif; ?>
 	<div class="container himlabadet-header__inner-container">
@@ -26,11 +27,14 @@
 	</div>
 
 
-	<?php do_action( 'hb_header_content_start' ); ?>
+	<?php if ( $is_startpage ): ?>
+		<?php do_action( 'hb_header_content_start' ); ?>
 
-	<?php get_template_part( 'partials/header_content' ); ?>
+		<?php get_template_part( 'partials/header_content' ); ?>
 
-	<?php do_action( 'hb_header_content_end' ); ?>
+		<?php do_action( 'hb_header_content_end' ); ?>
+
+	<?php endif; ?>
 
 	<?php do_action( 'hb_header_end' ); ?>
 

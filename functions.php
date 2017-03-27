@@ -1,16 +1,5 @@
 <?php
-global $sk_search;
 define( '__LIB_PATH__', __DIR__ . '/lib' );
-
-
-add_action( 'after_setup_theme', 'mega_test', 50 );
-
-
-function mega_test() {
-	if ( class_exists( 'sk_search' ) ) {
-		include_once __LIB_PATH__ . '/extends/class-sk-search.php';
-	}
-}
 
 
 require_once __LIB_PATH__ . '/hb-class-loader.php';
@@ -133,7 +122,7 @@ function get_format_link( $link = array(), $class ) {
 			$link['url'] = get_home_url();
 	}
 
-	$format             = '<a href="%s" class="%s" %s>%s %s</a>';
+	$format             = '<a href="%s" class="%s" %s>%s%s</a>';
 	$open_in_new_window = $link['link_new_window'] ? 'target="blank"' : '';
 	$icon               = ( $link['link_icon'] !== 'none' ) ? get_icon( $link['link_icon'] ) : '';
 	$link               = sprintf( $format, $link['url'], $class, $open_in_new_window, $icon, $link['link_title'] );
@@ -195,7 +184,7 @@ function get_current_template( $echo = false ) {
 		echo $current_theme_template;
 
 		return true;
-	} else {
-		return $current_theme_template;
 	}
+
+	return $current_theme_template;
 }

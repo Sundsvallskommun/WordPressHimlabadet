@@ -1,38 +1,22 @@
-
 @import '../../../../sk-tivoli/assets/css/scss/profile-colors';
 @import '../../../../sk-tivoli/assets/css/scss/variables';
 @import '../../../../sk-tivoli/assets/css/scss/mixins';
-
 @import "variables";
 @import "sk-bootstrap";
-
 //@import '../../../../sk-tivoli/assets/css/scss/bootstrap-sk/bootstrap-sk';
 //@import 'variables';
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,900');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,700,900');
-
 @import 'global';
 @import "helpers/overlay";
 @import "typography";
-
-
-
 @import "helpers/background-image";
 @import "helpers/links";
 @import "helpers/screen";
-
 @import "layout/header";
 @import "layout/footer";
-@import "partials/buttons";
-@import "partials/header-content";
-@import "partials/site-navigation";
-@import "partials/searchform";
-@import "partials/form";
-@import "partials/search";
-@import "partials/media";
-@import "partials/cards";
-@import "partials/news-list";
+@import "global_overrides";
+@import "partials/*";
 
 //@import 'overrides/openinghours';
 //

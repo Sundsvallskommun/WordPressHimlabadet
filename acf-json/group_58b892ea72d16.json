@@ -48,13 +48,67 @@
                     "return_format": "value"
                 },
                 {
+                  "key": "field_58d27dc576e5c",
+                  "label": "Anv\u00e4nda Google Materialize ikoner?",
+                  "name": "link_use_materialize",
+                  "type": "true_false",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  },
+                  "message": "",
+                  "default_value": 1,
+                  "ui": 0,
+                  "ui_on_text": "",
+                  "ui_off_text": ""
+                },
+              {
+                "key": "field_58d27fdef4ef3",
+                "label": "Materialize ikon",
+                "name": "link_materialize_ikon",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                  [
+                    {
+                      "field": "field_58d27dc576e5c",
+                      "operator": "==",
+                      "value": "1"
+                    }
+                  ]
+                ],
+                "wrapper": {
+                  "width": "",
+                  "class": "",
+                  "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+              },
+              {
                     "key": "field_58b89339ca5ea",
                     "label": "Ikon",
                     "name": "link_icon",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                "conditional_logic": [
+                  [
+                    {
+                      "field": "field_58d27dc576e5c",
+                      "operator": "!=",
+                      "value": "1"
+                    }
+                  ]
+                ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -67,7 +121,7 @@
                         "facebook": "Facebook"
                     },
                     "default_value": [],
-                  "allow_null": 1,
+                "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
                     "ajax": 0,
@@ -237,5 +291,5 @@
     "hide_on_screen": "",
   "active": 0,
     "description": "",
-  "modified": 1488974030
+  "modified": 1490189358
 }

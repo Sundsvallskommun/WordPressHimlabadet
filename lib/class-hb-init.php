@@ -12,6 +12,10 @@ class HB_Init {
 		add_action( 'template_include', array( &$this, 'define_current_template' ), 1000 );
 
 		add_filter( 'upload_mimes', array( &$this, 'add_svg_mime' ) );
+
+		add_action( 'after_setup_theme', array( &$this, 'override_setup_theme' ), 50 );
+
+
 	}
 
 
@@ -57,6 +61,8 @@ class HB_Init {
 		$labels->all_items          = 'Alla nyheter';
 		$labels->menu_name          = 'Nyheter';
 		$labels->name_admin_bar     = 'Nyheter';
+		//		var_dump($wp_post_types['post']);
+
 	}
 
 
@@ -76,4 +82,10 @@ class HB_Init {
 		return $template;
 	}
 
+
+	public function override_setup_theme() {
+		if ( class_exists( 'SK_Search' ) ) {
+			include_once __DIR__ . '/extends/class-hb-search.php';
+		}
+	}
 }

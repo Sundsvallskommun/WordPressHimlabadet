@@ -24,6 +24,17 @@ h5.card-title {
 }
 
 .card {
+
+  border: none;
+
+  &--blue, &--orange, &--green {
+	color: white;
+
+	.btn {
+	  color: white;
+	}
+  }
+
   &--blue {
 	background-color: hb-color(blue, 3);
 	&.card--transparent {
@@ -32,9 +43,9 @@ h5.card-title {
   }
 
   &--green {
-	background-color: hb-color(green, 2);
+	background-color: hb-color(green, 3);
 	&.card--transparent {
-	  background-color: rgba(hb-color(green, 2), .2);
+	  background-color: rgba(hb-color(green, 3), .2);
 	}
   }
 
@@ -53,5 +64,6 @@ h5.card-title {
 	  color: white;
 	}
   }
-
 }
+
+

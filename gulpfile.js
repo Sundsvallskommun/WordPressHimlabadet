@@ -6,7 +6,9 @@ var gulp         = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
 
     sass         = require('gulp-sass'),
-    cssmin       = require('gulp-cssmin'),
+    sassGlob     = require( 'gulp-sass-glob' ),
+
+    cssmin       = require( 'gulp-cssmin' ),
     autoprefixer = require('gulp-autoprefixer'),
 
     concat       = require('gulp-concat'),
@@ -31,6 +33,7 @@ var config = {
 gulp.task('styles', ['editor-styles'], function() {
 	gulp.src('./assets/css/scss/style.scss')
 		.pipe(config.production ? sourcemaps.init() : util.noop())
+		.pipe( sassGlob() )
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -45,6 +48,7 @@ gulp.task('styles', ['editor-styles'], function() {
 
 gulp.task('editor-styles', function() {
 	gulp.src('./assets/css/scss/editor-styles.scss')
+		.pipe( sassGlob() )
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
@@ -59,6 +63,7 @@ gulp.task('editor-styles', function() {
 gulp.task('scripts', function() {
 		gulp.src([
 			'./assets/js/source/app.dev.js',
+//			'./assets/js/source/opening-hours.dev.js',
 			'./lib/sk-municipality-adaptation/assets/js/sk-municipality-adaptation.js'
 		])
 		.pipe(sourcemaps.init())

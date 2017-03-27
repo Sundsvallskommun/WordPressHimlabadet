@@ -38,6 +38,8 @@ $gray: #6b7174;
 $gray-light: #818a91 !default;
 $gray-lighter: #e8e8ea;
 $gray-lightest: #f9f9fa;
+$post-text-color: #0a2036;
+
 
 $brand-primary: hb-color(blue, 4);
 $brand-success: hb-color(green, 2);
@@ -491,7 +493,7 @@ $card-spacer-x: 1.25rem !default;
 $card-spacer-y: .75rem !default;
 $card-border-width: 1px !default;
 $card-border-radius: $border-radius !default;
-$card-border-color: #e5e5e5 !default;
+$card-border-color: transparent;
 $card-border-radius-inner: $card-border-radius !default;
 $card-cap-bg: #f5f5f5 !default;
 $card-bg: #fff !default;

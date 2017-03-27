@@ -34,8 +34,6 @@ $header_contents = (array) get_field( 'header_content' );
 
 </div>
 
-?>
-
 <?php if ( false ): ?>
 	<div class="header-content container">
 		<aside class="header-content__aside">

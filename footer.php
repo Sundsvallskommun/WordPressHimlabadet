@@ -23,7 +23,10 @@ ob_start();
 ?>
 
 <footer class="site-footer">
+	<div class="footer-background">
 
+	</div>
+	<!-- /.footer-background -->
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 site-footer__upper">
@@ -33,9 +36,9 @@ ob_start();
 		</div>
 		<!-- /.row -->
 		<div class="row site-footer__below">
-			<div class="col-sm-6">
+			<div class="col-sm-12 col-md-6">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12 col-md-6">
 						<?php $has_logo = function_exists( 'the_custom_logo' ) && has_custom_logo(); ?>
 						<div class="logo-container no-margin no-padding <?php echo $has_logo ? 'haslogo' : '' ?>">
 							<?php the_custom_logo(); ?>
@@ -51,8 +54,8 @@ ob_start();
 				</div> <!-- /.row -->
 			</div>
 			<!-- /.col-sm-6 -->
-			<div class="col-sm-6">
-				<div class="rounded-iframe col-sm-12 no-padding text-right">
+			<div class="col-sm-12 col-md-6">
+				<div class="rounded-iframe col-sm-12 no-padding">
 					<?php the_shortcode_field( 'footer_content', 'options' ); ?>
 				</div>
 				<!-- /.rounded-iframe -->

@@ -1,5 +1,9 @@
 .site-footer {
+  margin-top: 3rem;
+  padding-top: 3rem;
   background-color: white;
+  position: relative;
+
   padding-bottom: 6rem;
   color: hb-color(blue, 3);
 
@@ -8,8 +12,9 @@
   }
 
   &__upper {
-	padding: 3rem 0;
+	padding: 0;
   }
+
 
   .menu-item a {
 	text-decoration: none;
@@ -36,6 +41,13 @@
 	}
 	&:hover {
 	  text-decoration: underline;
+	}
+  }
+
+  .rounded-iframe {
+	@include media-breakpoint-up(md) {
+	  text-align: right;
+
 	}
   }
 }
