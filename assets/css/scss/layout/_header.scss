@@ -10,7 +10,7 @@
 
 	@include media-breakpoint-down('sm') {
 	  //background-color: transparent;
-	  display: none;
+	  //display: none;
 	}
 
 	@include media-breakpoint-up('md') {
@@ -68,4 +68,12 @@
 
 .mobile-header {
 
+}
+
+@include media-breakpoint-down(sm) {
+  .offcanvas {
+	position: fixed;
+	z-index: 90;
+	width: 100% !important;
+  }
 }

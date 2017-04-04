@@ -15,13 +15,11 @@
 
 }
 
-.col-md-8 {
   @include media-breakpoint-up(md) {
-	& > .block-link-list {
+	.block-link-list {
 	  column-count: 2;
 	}
   }
-}
 
 .link-list {
   &__icon {

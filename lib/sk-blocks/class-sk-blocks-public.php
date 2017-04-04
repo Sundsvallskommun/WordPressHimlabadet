@@ -184,7 +184,7 @@ class SK_Blocks_Public {
 			<div class="block block-image-and-text  <?php echo ( $inverted ) ? 'block-image-and-text--invert-order' : ''; ?>">
 				<div class="block-image-and-text__image col-sm-12 col-md-6 col-xs-12" style="background-image: url('<?php echo $image[0]; ?>');">
 					<img src="<?php echo $image[0]; ?>" class="invisible"></div>
-				<div class="block-image-and-text__footer col-sm-12 col-md-6">
+				<div class="block-image-and-text__footer col-sm-12 col-md-6 col-xs-12">
 					<div class="block-image-and-text__title"><h3><?php echo $title; ?></h3></div>
 					<div class="block-image-and-text__content"><?php echo $content; ?></div>
 					<?php if ( ! empty( $link ) ) : ?>

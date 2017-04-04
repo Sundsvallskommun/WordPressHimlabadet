@@ -21,6 +21,7 @@ $header_contents = (array) get_field( 'header_content' );
 				case 'shortcode':
 				case 'card':
 				case 'news':
+				case 'the_title_and_content':
 					get_template_part( 'partials/header_content/' . $layout );
 					break;
 				default:

@@ -9,3 +9,14 @@ body.search-results main {
   display: inline-block;
   max-width: 100%;
 }
+
+.main-content {
+  padding-top: 2rem;
+}
+
+.page-template-page-start-advanced .main-content {
+  @include media-breakpoint-up(sm) {
+    margin-top: -6.5rem;
+    padding-top: 0;
+  }
+}

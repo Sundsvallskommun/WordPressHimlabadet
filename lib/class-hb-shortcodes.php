@@ -15,9 +15,9 @@ class HB_Shortcodes {
 		$facebook_widget = get_field( 'hb_facebook_widget', 'options' );
 		if ( strlen( $facebook_widget ) > 0 ) {
 			return $facebook_widget;
-		} else {
-			return 'No faccebook widget code';
 		}
+
+		return 'No faccebook widget code';
 	}
 
 	public function shortcode_footer_links() {

@@ -1,8 +1,6 @@
 <?php
-define( '__LIB_PATH__', __DIR__ . '/lib' );
 
-
-require_once __LIB_PATH__ . '/hb-class-loader.php';
+require_once __DIR__ . '/lib/hb-class-loader.php';
 
 /**
  * Only Himlabadet options
@@ -64,8 +62,18 @@ function sk_childtheme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'sk_childtheme_enqueue_styles' );
 
 
-/** Should be commented */
-
+/**
+ * Function get_shortcode_field
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param string $selector
+ * @param bool $post_id
+ * @param string $if_false
+ *
+ * @return string
+ *
+ */
 function get_shortcode_field( $selector = '', $post_id = false, $if_false = '' ) {
 	$tmp_field = get_field( $selector, $post_id );
 
@@ -77,15 +85,33 @@ function get_shortcode_field( $selector = '', $post_id = false, $if_false = '' )
 }
 
 
+/**
+ * Function the_shortcode_field
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param string $selector
+ * @param bool $post_id
+ * @param string $if_false
+ *
+ */
 function the_shortcode_field( $selector = '', $post_id = false, $if_false = '' ) {
 	echo get_shortcode_field( $selector, $post_id, $if_false );
 }
 
 
 /**
- * More
+ * Function get_format_link_group
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param array $links
+ * @param string $class
+ * @param bool $combine
+ *
+ * @return array|bool
+ *
  */
-
 function get_format_link_group( $links = array(), $class = 'link', $combine = false ) {
 
 	if ( count( $links ) < 1 ) {
@@ -100,6 +126,17 @@ function get_format_link_group( $links = array(), $class = 'link', $combine = fa
 	return $links;
 }
 
+/**
+ * Function get_format_link
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param array $link
+ * @param $class
+ *
+ * @return array|string
+ *
+ */
 function get_format_link( $link = array(), $class ) {
 	if ( ! $link ) {
 		return $link;
@@ -131,6 +168,16 @@ function get_format_link( $link = array(), $class ) {
 }
 
 
+/**
+ * Function get_footer_links
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @param bool $format_links
+ *
+ * @return bool
+ *
+ */
 function get_footer_links( $format_links = true ) {
 
 	$links = get_field( 'footer_links', 'options' );

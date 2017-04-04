@@ -12,9 +12,12 @@
   }
 
   &__upper {
-	padding: 0;
-  }
 
+	margin-bottom: 5rem;
+	@include media-breakpoint-down(md) {
+	  display: none;
+	}
+  }
 
   .menu-item a {
 	text-decoration: none;
@@ -27,12 +30,19 @@
 	.row + .row {
 	  margin-top: 3.4rem;
 	}
+
+	@include media-breakpoint-down(md) {
+	  aside + aside {
+		margin-top: $grid-gutter-width;
+	  }
+	}
+
   }
 
   .link {
 	margin-bottom: 1rem;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: font-size(7);
 	text-decoration: none;
 	color: hb-color(blue, 3);
 	.icon {
@@ -47,7 +57,10 @@
   .rounded-iframe {
 	@include media-breakpoint-up(md) {
 	  text-align: right;
+	}
 
+	@include media-breakpoint-down(md) {
+	  width: 100%;
 	}
   }
 }

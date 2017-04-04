@@ -2,6 +2,9 @@
 .site-header {
   font-family: $font-family-base;
 
+  .navbar {
+	margin: .65rem 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -19,7 +22,7 @@
 
 	&__search-form {
 	  flex: 0 1 auto;
-	  width: 25%;
+	  width: 30%;
 	}
 
 	& > * {
@@ -38,7 +41,8 @@
   }
 
   .menu-item {
-	padding: ($input-padding-y-lg * 0.75) $input-padding-x-lg;
+	font-size: font-size(9);
+	padding: ($input-padding-y-lg * 0.75) ($input-padding-x-lg * 0.75);
 	margin: 0 .5rem;
 	border-radius: $border-radius-lg;
 	a {

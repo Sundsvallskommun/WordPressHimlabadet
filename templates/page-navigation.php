@@ -5,15 +5,22 @@
 sk_header();
 ?>
 
+
+<?php
+
+$template_theme_color_class = get_field( 'navtemplate_color' ) ? 'navigation-page--' . get_field( 'navtemplate_color' ) : '';
+
+?>
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 
-	<div class="container card">
+	<div class="container card <?php echo $template_theme_color_class; ?>">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="card">
 					<header class="card-block navigation-page__header">
-						<div class="page-icon" <?php section_style( 'background' ); ?>><?php echo get_section_icon(); ?></div>
+						<div class="page-icon" style=""><?php ! get_field( 'navtemplate_material_icon' ) ?: material_icon( get_field( 'navtemplate_material_icon' ) ) ?></div>
 						<div class="navigation-page__inner-container">
 							<div class="navigation-page__header-title clearfix">
 								<?php do_action( 'hb_before_page_title' ); ?>
