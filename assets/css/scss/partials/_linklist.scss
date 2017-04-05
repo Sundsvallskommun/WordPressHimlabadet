@@ -15,11 +15,11 @@
 
 }
 
-  @include media-breakpoint-up(md) {
-	.block-link-list {
-	  column-count: 2;
-	}
+@include media-breakpoint-up(md) {
+  .block-link-list {
+	column-count: 2;
   }
+}
 
 .link-list {
   &__icon {

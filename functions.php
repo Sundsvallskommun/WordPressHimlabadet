@@ -79,9 +79,9 @@ function get_shortcode_field( $selector = '', $post_id = false, $if_false = '' )
 
 	if ( $tmp_field ) {
 		return do_shortcode( $tmp_field );
-	} else {
-		return $if_false;
 	}
+
+	return $if_false;
 }
 
 
@@ -107,12 +107,11 @@ function the_shortcode_field( $selector = '', $post_id = false, $if_false = '' )
  *
  * @param array $links
  * @param string $class
- * @param bool $combine
  *
  * @return array|bool
  *
  */
-function get_format_link_group( $links = array(), $class = 'link', $combine = false ) {
+function get_format_link_group( $links = array(), $class = 'link' ) {
 
 	if ( count( $links ) < 1 ) {
 		return false;

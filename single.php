@@ -17,6 +17,7 @@
 			<div class="single-post__content" id="post-content">
 
 				<?php do_action( 'sk_before_page_title' ); ?>
+
 				<h1 class="single-post__title"><?php the_title(); ?></h1>
 
 				<?php if ( has_post_thumbnail() && ! get_field( 'top_image' ) ): ?>

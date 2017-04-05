@@ -26,9 +26,8 @@
   }
 
   @include media-breakpoint-up(lg) {
-	margin-left: 1rem;
 	width: 10rem;
-	margin-right: 2rem;
+	margin: 0;
   }
 
   @include media-breakpoint-down(lg) {

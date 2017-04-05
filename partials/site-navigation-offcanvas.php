@@ -5,7 +5,7 @@
 	</nav>
 
 	<div class="nav-header hidden-md-up">
-		<h2 class="pull-xs-left m-b-1">Meny</h2>
+		<h2 class="pull-xs-left m-b-1 sr-only"><?php _e( 'Meny', 'hb' ); ?></h2>
 		<div class="clearfix"></div>
 	</div>
 

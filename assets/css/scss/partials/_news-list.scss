@@ -1,7 +1,7 @@
 .news-list {
   //padding: 0.75rem;
 
-  .news-item{
+  .news-item {
 	font-size: $font-size-sm;
   }
 
@@ -28,5 +28,21 @@
   }
   &__content {
 
+  }
+
+  @include media-breakpoint-down(sm) {
+
+	flex-flow: column wrap;
+
+	.media &__image {
+	  //display:none;
+	  width: 100%;
+	  height: auto;
+	}
+
+	.media-body {
+	  margin-left: 0;
+	  margin-top: 1.125rem;
+	}
   }
 }

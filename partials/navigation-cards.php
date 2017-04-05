@@ -72,9 +72,10 @@
 							if ( ! $manual_excerpt && is_navigation( $child_id ) ) {
 
 								// Set limit to 6 posts just to see if there is more than 5 subpages.
-								$children = get_children( array( 'post_type'   => 'page',
-								                                 'post_parent' => $child_id,
-								                                 'numberposts' => 6
+								$children = get_children( array(
+									'post_type'   => 'page',
+									'post_parent' => $child_id,
+									'numberposts' => 6
 								) );
 
 								$children = apply_filters( 'sk_navcard_children', $children, $child_id );

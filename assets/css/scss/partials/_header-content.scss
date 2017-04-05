@@ -30,6 +30,10 @@
 
 	}
 
+	@include media-breakpoint-down(sm) {
+	  margin: 2rem 0;
+	}
+
   }
 
 }

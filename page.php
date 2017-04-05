@@ -1,10 +1,9 @@
 <?php sk_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
+	<div class="container-fluid">
 
-	<div class="container">
-
-		<div class="card single-post__row">
+		<div class="single-post__row">
 
 			<aside class="sk-sidebar single-post__sidebar">
 
@@ -22,14 +21,23 @@
 
 				<?php do_action( 'sk_after_page_title' ); ?>
 
+				<div class="single-post__breadcrumb">
+					<?php the_breadcrumbs(); ?>
+				</div>
+
 				<?php do_action( 'sk_before_page_content' ); ?>
 
-				<?php the_content(); ?>
+				<div class="card">
+					<div class="card-block">
+						<?php the_content(); ?>
+					</div>
+					<!-- /.card-block -->
+				</div>
+				<!-- /.card -->
 
 				<div class="clearfix"></div>
 
 				<?php do_action( 'sk_after_page_content' ); ?>
-
 
 			</div>
 
