@@ -14,7 +14,14 @@ $header_contents = (array) get_field( 'header_content' );
 
 			<?php
 
-			$layout               = get_row_layout();
+			/**
+			 * The layout name
+			 */
+			$layout = get_row_layout();
+
+			/**
+			 * Used globaly in the partial
+			 */
 			$current_content_data = get_row( true );
 
 			switch ( $layout ) {
