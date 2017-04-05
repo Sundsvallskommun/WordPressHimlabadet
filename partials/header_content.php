@@ -1,9 +1,8 @@
 <?php
-
-
 global $current_content_data;
-$header_contents = (array) get_field( 'header_content' );
 
+
+$header_contents = (array) get_field( 'header_content' );
 
 ?>
 <?php if ( $header_contents ): ?>
