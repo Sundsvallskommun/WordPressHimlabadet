@@ -31,6 +31,7 @@
 
   &__image {
 	padding: 2rem 0;
+	overflow: hidden;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -59,6 +60,9 @@
 	background-color: rgba(0, 0, 0, .1);
 	@include media-breakpoint-down(sm) {
 	  font-size: .8em;
+	}
+	&:hover, &:focus, &:active {
+	  background-color: rgba(0, 0, 0, .3);
 	}
   }
 

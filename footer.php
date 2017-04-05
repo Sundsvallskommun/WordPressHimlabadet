@@ -27,7 +27,7 @@ ob_start();
 
 	</div>
 	<!-- /.footer-background -->
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 site-footer__upper">
 				<?php get_template_part( 'partials/main-menu' ); ?>

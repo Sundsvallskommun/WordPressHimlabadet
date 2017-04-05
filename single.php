@@ -4,7 +4,7 @@
 
 	<div class="container">
 
-		<div class="single-post__row card">
+		<div class="single-post__row">
 
 			<aside class="sk-sidebar single-post__sidebar">
 

@@ -2,6 +2,7 @@
 <?php if ( WP_DEBUG ): ?>
 	<div class="screen"></div>
 <?php endif; ?>
+<?php get_template_part( 'partials/facebook-init-script' ); ?>
 <div class="svg-wrap" style="position: absolute;top: -9999px;left: -9999px;width: 0;height: 0;overflow: hidden;">
 	<?php require_once __DIR__ . '/assets/images/icons.svg'; ?>
 </div>
@@ -15,7 +16,7 @@
 	<?php if ( $background_image && $can_have_header_content ): ?>
 		<div class="background-image <?php echo $background_classes; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div>
 	<?php endif; ?>
-	<div class="container himlabadet-header__inner-container">
+	<div class="container-fluid himlabadet-header__inner-container">
 		<div class="row">
 			<?php $has_logo = function_exists( 'the_custom_logo' ) && has_custom_logo(); ?>
 			<div class="col-sm-3 logo-container <?php echo $has_logo ? 'haslogo' : '' ?>">

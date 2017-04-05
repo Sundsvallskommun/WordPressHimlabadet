@@ -6,7 +6,7 @@ $header_contents = (array) get_field( 'header_content' );
 
 
 ?>
-<div class="header-content container">
+<div class="header-content container-fluid">
 	<?php if ( $header_contents ): ?>
 		<?php while ( the_flexible_field( 'header_content' ) ): ?>
 

@@ -15,10 +15,10 @@ $template_theme_color_class = get_field( 'navtemplate_color' ) ? 'navigation-pag
 <?php while ( have_posts() ) : the_post(); ?>
 
 
-	<div class="container card <?php echo $template_theme_color_class; ?>">
+	<div class="container-fluid card <?php echo $template_theme_color_class; ?>">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="card">
+				<div class="card hidden-xs-up">
 					<header class="card-block navigation-page__header">
 						<div class="page-icon" style=""><?php ! get_field( 'navtemplate_material_icon' ) ?: material_icon( get_field( 'navtemplate_material_icon' ) ) ?></div>
 						<div class="navigation-page__inner-container">

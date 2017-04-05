@@ -235,3 +235,15 @@ function get_current_template( $echo = false ) {
 
 	return $current_theme_template;
 }
+
+/**
+ * Function get_facebook_appid
+ * @since 1.0.0
+ * @author Jonatan Olsson <jonatan@kingmary.se>
+ *
+ * @return mixed|null|void
+ *
+ */
+function get_facebook_app_id() {
+	return get_field( 'hb_facebook_app_id', 'options' );
+}

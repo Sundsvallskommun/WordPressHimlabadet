@@ -2,8 +2,8 @@
 
 <aside class="header-content__aside">
 	<div class="card card--transparent card--blue header-content__card">
-		<div class="card-block card-block--extra-padding">
-			<h3><?php echo $current_content_data['title']; ?></h3>
+		<div class="card-block">
+			<h2><?php echo $current_content_data['title']; ?></h2>
 			<div>
 				<?php echo do_shortcode( $current_content_data['text'] ); ?>
 			</div>

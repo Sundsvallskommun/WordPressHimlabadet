@@ -1,4 +1,6 @@
 .himlabadet-header {
+  overflow: hidden;
+
   background-color: transparent;
   position: relative;
 
@@ -16,7 +18,8 @@
 	@include media-breakpoint-up('md') {
 	  position: relative;
 	  width: 100%;
-	  padding: 4rem 0; // 2.5
+	  padding-top: 4rem;
+	  padding-bottom: 4rem;
 
 	  background-color: transparent;
 	  background-image: url('../images/header.svg');
@@ -24,16 +27,18 @@
 	  background-repeat: no-repeat;
 	  background-position: center bottom;
 
-	  &:before, &:after {
-		@include overlay();
-		background-color: white;
-		z-index: -1;
-		left: -95%;
-	  }
+	  @include media-breakpoint-up(lg) {
+		&:before, &:after {
+		  @include overlay();
+		  background-color: white;
+		  z-index: -1;
+		  left: -95%;
+		}
 
-	  &:after {
-		left: auto;
-		right: -95%;
+		&:after {
+		  left: auto;
+		  right: -95%;
+		}
 	  }
 
 	}
@@ -66,8 +71,21 @@
   margin: 1rem 0;
 }
 
-.mobile-header {
-
+@include media-breakpoint-down(sm) {
+  .mobile-header {
+	height: auto;
+	padding: 1rem;
+	.custom-logo-link {
+	  display: block;
+	  .custom-logo {
+		width: 30%;
+		margin: 0 auto;
+		display: block;
+		max-height: initial;
+		max-width: initial;
+	  }
+	}
+  }
 }
 
 @include media-breakpoint-down(sm) {
