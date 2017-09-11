@@ -78,7 +78,7 @@ class Wp_Plugin_Openinghours_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_register_script( $this->plugin_name, $this->url_to_files . 'js/wp-plugin-openinghours-public.js', array( 'jquery' ), $this->version, false );
+		//		wp_register_script( $this->plugin_name, $this->url_to_files . 'js/wp-plugin-openinghours-public.js', array( 'jquery' ), $this->version, false );
 		wp_register_script( 'wp-plugin-openinghours-datepicker', $this->url_to_files . 'js/datepicker/bootstrap-datepicker.js', array( 'jquery' ), $this->version, false );
 		wp_register_script( 'wp-plugin-openinghours-datepicker-locale', $this->url_to_files . 'js/datepicker/locales/bootstrap-datepicker.sv.js', array( 'jquery' ), $this->version, false );
 		wp_localize_script(

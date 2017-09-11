@@ -64,7 +64,7 @@ gulp.task('scripts', function() {
 		gulp.src([
 			'./assets/js/source/app.dev.js',
 			'./lib/sk-municipality-adaptation/assets/js/sk-municipality-adaptation.js',
-			//			'./assets/js/source/opening-hours.dev.js',
+			'./lib/himlabadet-opening-hours/assets/js/wp-plugin-openinghours-public.dev.js',
 
 		])
 		.pipe(sourcemaps.init())
