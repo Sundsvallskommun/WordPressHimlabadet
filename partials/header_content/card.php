@@ -1,7 +1,7 @@
 <?php global $current_content_data; ?>
 
 <aside class="header-content__aside">
-	<div class="card card--transparent card--blue header-content__card">
+	<div class="card card--transparent header-content__card">
 		<div class="card-block">
 			<h2><?php echo $current_content_data['title']; ?></h2>
 			<div>

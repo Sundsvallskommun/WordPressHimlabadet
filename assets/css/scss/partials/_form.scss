@@ -1,7 +1,7 @@
 .form-control {
   border: none;
   font-weight: 600;
-  box-shadow: inset 0 3px 0 0 hb-color(blue, 3);
+  //box-shadow: inset 0 3px 0 0 hb-color(blue, 3);
 
   &:hover {
 
@@ -14,6 +14,10 @@
   color: white;
 }
 
-
-
+.btn-toolbar {
+  > .btn {
+	float: left;
+	@include clearfix();
+  }
+}
 

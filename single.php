@@ -2,7 +2,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="container">
+	<div class="container-fluid">
 
 		<div class="single-post__row">
 
@@ -28,11 +28,18 @@
 
 				<?php do_action( 'sk_before_page_content' ); ?>
 
-				<?php the_content(); ?>
 
+				<div class="card container-text container-text--center">
+					<div class="card-block">
+						<?php the_content(); ?>
+						<div class="clearfix"></div>
+					</div>
+				</div>
 				<div class="clearfix"></div>
 
-				<?php do_action( 'sk_after_page_content' ); ?>
+				<div class="container-text container-text--center m-t-1">
+					<?php do_action( 'sk_after_page_content' ); ?>
+				</div>
 
 			</div>
 

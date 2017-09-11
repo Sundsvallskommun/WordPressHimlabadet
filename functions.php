@@ -246,3 +246,27 @@ function get_current_template( $echo = false ) {
 function get_facebook_app_id() {
 	return get_field( 'hb_facebook_app_id', 'options' );
 }
+
+/**
+ * Get post thumbnail alternative text.
+ *
+ * @since 1.0.0
+ *
+ * @param int $post_id Post ID
+ *
+ * @return string
+ */
+function get_post_thumbnail_alt( $post_id = null ) {
+	if ( $post_id == null ) {
+		global $post;
+		$post_id = $post->ID;
+	}
+
+	$thumbnail_id = get_post_thumbnail_id( $post_id );
+
+	if ( empty( $thumbnail_id ) ) {
+		return false;
+	}
+
+	return get_image_alt( $thumbnail_id );
+}

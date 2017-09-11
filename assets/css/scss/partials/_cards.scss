@@ -16,6 +16,9 @@ h5.card-title {
   @include media-breakpoint-down(md) {
 	padding: 1.75rem;
   }
+  @include media-breakpoint-down(md) {
+	padding: 1.2rem;
+  }
 
   //@include media-breakpoint-down(sm) {
   //padding: 1rem .75rem;
@@ -31,6 +34,7 @@ h5.card-title {
   .card-title {
 	margin: .5rem 0 1rem;
   }
+
 }
 
 .card {
@@ -70,10 +74,24 @@ h5.card-title {
   &--transparent {
 	background-color: rgba(black, .2);
 
+	color: white;
+
 	.btn-primary {
 	  color: white;
 	}
   }
 }
+
+/**
+	Test
+ */
+@include media-breakpoint-down(xs) {
+  [class*="col-"] {
+	.card:not(.card--keep-padding) .card-block {
+	  padding: 0;
+	}
+  }
+}
+
 
 

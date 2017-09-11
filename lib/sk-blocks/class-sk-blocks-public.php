@@ -220,19 +220,20 @@ class SK_Blocks_Public {
 			<?php if ( ! empty( $title ) ) : ?>
 				<h3><?php echo $title; ?></h3>
 			<?php endif; ?>
-			<?php foreach ( $groups as $group ) : ?>
-				<div class="block-link-list__container">
-					<div class="block-link-list__title"><?php echo $group['rubrik']; ?></div>
-					<ul>
-						<?php foreach ( $group['link'] as $link ) : ?>
-							<li>
-								<?php echo sprintf( $markup, $link['linklist_url'], get_icon( 'arrow-right' ), $link['linklist_title'] ) ?>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
-			<?php endforeach; ?>
-
+			<div class="block-link-list__columns">
+				<?php foreach ( $groups as $group ) : ?>
+					<div class="block-link-list__container">
+						<div class="block-link-list__title"><?php echo $group['rubrik']; ?></div>
+						<ul>
+							<?php foreach ( $group['link'] as $link ) : ?>
+								<li>
+									<?php echo sprintf( $markup, $link['linklist_url'], get_icon( 'arrow-right' ), $link['linklist_title'] ) ?>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endforeach; ?>
+			</div>
 
 		</div>
 

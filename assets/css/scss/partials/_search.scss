@@ -5,6 +5,12 @@
   margin: 0;
 }
 
+.searchform .form-control.tt-hint {
+  z-index: 1;
+}
+
+
+
 .tt-menu {
   @include media-breakpoint-down(sm) {
 	overflow: scroll !important;

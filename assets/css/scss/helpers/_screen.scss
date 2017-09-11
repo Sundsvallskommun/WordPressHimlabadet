@@ -14,24 +14,28 @@
 	padding: .5em;
 	color: #fff;
 
-	@media (min-width: hb-breakpoints(xs)) {
+	@include media-breakpoint-up(xs) {
 	  background: rgba(125, 0, 0, .8);
 	  content: 'col-xs'
 	}
 
-	@media (min-width: hb-breakpoints(sm)) {
+	@include media-breakpoint-up(sm) {
 	  background: rgba(125, 125, 0, .8);
 	  content: 'col-sm'
 	}
 
-	@media (min-width: hb-breakpoints(md)) {
+	@include media-breakpoint-up(md) {
 	  background: rgba(0, 0, 125, .8);
 	  content: 'col-md'
 	}
 
-	@media (min-width: hb-breakpoints(lg)) {
+	@include media-breakpoint-up(lg) {
 	  background: rgba(125, 0, 125, .8);
 	  content: 'col-lg'
+	}
+	@include media-breakpoint-up(xl) {
+	  background: rgba(49, 173, 163, 0.8);
+	  content: 'col-xl'
 	}
 
   }

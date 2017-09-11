@@ -4,7 +4,7 @@
 
 	<div class="container">
 
-		<div class="card single-post__row">
+		<div class="single-post__row">
 
 			<aside class="sk-sidebar single-post__sidebar">
 
@@ -22,40 +22,44 @@
 
 				<?php do_action( 'sk_after_page_title' ); ?>
 
-				<?php do_action( 'sk_before_page_content' ); ?>
+				<div class="card">
+					<div class="card-block">
+						<?php do_action( 'sk_before_page_content' ); ?>
 
-				<?php the_content(); ?>
+						<?php the_content(); ?>
 
-				<?php the_post_thumbnail( 'portrait', array( 'class' => 'alignleft' ) ); ?>
+						<?php the_post_thumbnail( 'portrait', array( 'class' => 'alignleft' ) ); ?>
 
-				<div style="display: inline-block;">
-					<?php
-					$fields = array(
-						'role'        => array( 'Roll', get_field( 'role' ) ),
-						'email'       => array( 'E-post', get_email_links( get_field( 'email' ) ) ),
-						'phone'       => array( 'Telefon', get_phone_links( get_field( 'phone' ) ) ),
-						'address'     => array( 'Adress', get_field( 'address' ) ),
-						'hours'       => array( 'Öppettider', get_field( 'hours' ) ),
-						'description' => array( '', get_field( 'description' ) ),
-					);
+						<div style="display: inline-block;" class="page-contact__fields">
+							<?php
+							$fields = array(
+								'role'        => array( 'Roll', get_field( 'role' ) ),
+								'email'       => array( 'E-post', get_email_links( get_field( 'email' ) ) ),
+								'phone'       => array( 'Telefon', get_phone_links( get_field( 'phone' ) ) ),
+								'address'     => array( 'Adress', get_field( 'address' ) ),
+								'hours'       => array( 'Öppettider', get_field( 'hours' ) ),
+								'description' => array( '', get_field( 'description' ) ),
+							);
 
-					echo '<dl>';
-					foreach ( $fields as $key => $field ) {
+							echo '<dl>';
+							foreach ( $fields as $key => $field ) {
 
-						if ( ! $field[1] ) {
-							continue;
-						}
+								if ( ! $field[1] ) {
+									continue;
+								}
 
-						printf( '<dt>%s</dt><dd>%s</dd>', $field[0], $field[1] );
-					}
-					echo '</dl>';
+								printf( '<dt>%s</dt><dd>%s</dd>', $field[0], $field[1] );
+							}
+							echo '</dl>';
 
-					?>
+							?>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<?php do_action( 'sk_after_page_content' ); ?>
+					</div>
 				</div>
-
-				<div class="clearfix"></div>
-
-				<?php do_action( 'sk_after_page_content' ); ?>
 
 			</div>
 

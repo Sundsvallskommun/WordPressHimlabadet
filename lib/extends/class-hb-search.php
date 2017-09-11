@@ -9,7 +9,10 @@ if ( class_exists( 'SK_Search' ) ) {
 		public function __construct() {
 			parent::__construct();
 
-			remove_action( 'wp_footer', array( &$this, 'handlebar_templates' ) );
+			remove_action( 'wp_footer', array(
+				&$this,
+				'handlebar_templates'
+			) ); // funkar förmodligen inte TODO: Testa!
 			add_action( 'wp_footer', array( &$this, 'handlebar_templates' ), 1 );
 
 		}
