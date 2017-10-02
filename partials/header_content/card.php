@@ -7,9 +7,11 @@
 			<div>
 				<?php echo do_shortcode( $current_content_data['text'] ); ?>
 			</div>
-			<?php foreach ( $current_content_data['button'] as $button ) : ?>
-				<?php echo get_format_link( $button, 'btn btn-primary' ); ?>
-			<?php endforeach; ?>
+			<?php if ( isset( $current_content_data['button'] ) ): ?>
+				<?php foreach ( $current_content_data['button'] as $button ) : ?>
+					<?php echo get_format_link( $button, 'btn btn-primary' ); ?>
+				<?php endforeach; ?>
+			<?php endif; ?>
 		</div>
 		<!-- /.card-block -->
 	</div>

@@ -18,6 +18,11 @@
 	}
 	padding-left: 0;
   }
+
+  .nav-card-text {
+	color: currentColor;
+  }
+
   &:hover {
 	.link-list__icon {
 	  background: rgba(hb-color(blue, 1), .10) !important;

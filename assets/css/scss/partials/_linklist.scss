@@ -39,10 +39,11 @@
 	background: hb-color(blue, 1) !important;
 	padding: 0.3125rem;
 	border-radius: 5px;
+
 	.icon {
 	  height: 100%;
-	  width: 50%;
-	  left: 30%;
+	  width: 100%;
+	  left: 0;
 	  @include ie() {
 		width: 100%;
 		left: 0;

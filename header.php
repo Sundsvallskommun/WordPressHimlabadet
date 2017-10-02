@@ -1,6 +1,6 @@
 <?php get_template_part( 'head' ); ?>
 
-<?php if ( ! WfP_DEBUG ): ?>
+<?php if ( ! WP_DEBUG ): ?>
 	<div class="screen"></div>
 <?php endif; ?>
 
@@ -24,17 +24,25 @@
 <header class="site-header himlabadet-header">
 
 	<?php if ( $background_image && $can_have_header_content && ! $background_video_is_active ): ?>
+
 		<div class="background-image <?php echo $background_classes; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div>
+
 	<?php endif; ?>
 
 	<?php if ( $background_video_is_active ): ?>
+
 		<div class="background-image <?php echo $background_classes; ?>" style="background-image:url(<?php echo $background_image; ?>)"></div>
+
 		<?php if ( ! wp_is_mobile() ): ?>
+
 			<div class="background-video-overlay"></div>
+
 			<video poster="<?php echo $background_image; ?>" id="background-video" class="background-video" playsinline autoplay muted loop>
 				<source src="<?php echo $background_video; ?>" type="video/mp4">
 			</video>
+
 		<?php endif; ?>
+
 	<?php endif; ?>
 
 	<div class="container-fluid himlabadet-header__inner-container">

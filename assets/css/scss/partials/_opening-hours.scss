@@ -28,6 +28,11 @@
 	@include media-breakpoint-down(md) {
 	  width: 80%;
 	}
+	&:hover {
+	  background-color: rgba(hb-color(blue, 3), .1);
+	  //background-color: rgba(hb-color(blue, 4), .5);
+
+	}
   }
 
   a {
@@ -64,6 +69,13 @@
 		flex: 0 0 auto;
 	  }
 	}
+
+	&:hover {
+	  background-color: rgba(hb-color(blue, 3), .1);
+	  //background-color: rgba(hb-color(blue, 4), .5);
+
+	}
+
   }
 
   .extra-information {

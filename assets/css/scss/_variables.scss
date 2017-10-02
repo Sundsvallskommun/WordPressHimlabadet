@@ -99,8 +99,8 @@ $paragraph-color: #42515a;
 //
 // Style anchor elements.
 
-$link-color: $brand-primary !default;
-$link-decoration: none !default;
+$link-color: hb-color(blue, 3);
+$link-decoration: none;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 

@@ -1,4 +1,4 @@
-<div id="mainNavigation" class="offcanvas col-sm-8 pull-md-right">
+<div id="mainNavigation" class="offcanvas col-sm-9 pull-md-right">
 
 	<nav class="hidden-md-up mobile-header not-fixed">
 		<?php get_template_part( 'partials/site-logo' ); ?>
