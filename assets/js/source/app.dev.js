@@ -11,7 +11,7 @@
 		}
 
 		a = setTimeout( function () {
-			console.log( 'RUN' );
+//			console.log( 'RUN' );
 			FB.XFBML.parse();
 		}, 1000 )
 	} );
