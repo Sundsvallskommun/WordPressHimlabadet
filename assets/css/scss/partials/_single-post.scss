@@ -39,12 +39,22 @@
 	@include make-col();
 	@include make-col-span(12);
 
+	  a{
+		  color: hb-color(blue, 3);
+
+		  &.btn{
+			  color:white;
+		  }
+
+	  }
+
 	@include media-breakpoint-up(md) {
 	  @include make-col-span(10);
 	}
 	@include media-breakpoint-up(lg) {
 	  max-width: none; //48.125em;
 	}
+
 
   }
 }

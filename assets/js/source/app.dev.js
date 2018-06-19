@@ -18,6 +18,8 @@
 
     $( function ()
     {
+
+
     var i = 1; // Total number of images
     var n = 1; // the foot number (1-5)
     var m = 1; // sequence indicator
@@ -57,7 +59,6 @@
                     };
 
                 });
-                console.log(i);
                 if (i == totalnumberofimg * 5 - 3) {
                     clearInterval(myAnim);
                 }

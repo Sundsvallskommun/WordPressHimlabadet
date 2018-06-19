@@ -1,6 +1,6 @@
 <?php get_template_part( 'head' ); ?>
 
-<?php if ( ! WP_DEBUG ): ?>
+<?php if (  WP_DEBUG ): ?>
 	<div class="screen"></div>
 <?php endif; ?>
 

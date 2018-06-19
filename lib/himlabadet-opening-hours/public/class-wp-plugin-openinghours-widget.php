@@ -145,7 +145,7 @@ class WP_Plugin_OpeningHours_Widget {
 		ob_start();
 		?>
 		<div class="title">
-			<a href="<?php echo get_permalink( $location['location_data']->ID ); ?>">
+			<a href="<?php echo get_field('redirect_to', $location['location_data']->ID )? get_field('redirect_to', $location['location_data']->ID ) : get_permalink( $location['location_data']->ID ); ?>">
 				<span><?php echo $location['location_data']->post_title; ?>:</span>
 				<?php if ( is_array( $location['hours'] ) ) : ?>
 					<?php
