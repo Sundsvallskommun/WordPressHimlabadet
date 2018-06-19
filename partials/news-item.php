@@ -1,5 +1,5 @@
 <?php do_action( 'hb_before_news_item' ); ?>
-	<a href="<?php the_permalink(); ?>" class="media news-item">
+	<a href="<?php echo get_field('redirect_to')? get_field('redirect_to') : the_permalink(); ?>" class="media news-item">
 
 		<?php if ( has_post_thumbnail() ): ?>
 			<img src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" class="news-item__image" alt="<?php get_post_thumbnail_alt( get_post_thumbnail_id() ) ?>">
