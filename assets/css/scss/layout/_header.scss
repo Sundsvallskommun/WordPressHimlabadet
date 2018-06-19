@@ -69,7 +69,11 @@
 	//height: 70vh;
 	min-height: 35rem;
   }
-
+	.site-logo{
+		.custom-logo-link{
+			max-width: 14.5rem;
+		}
+	}
 }
 
 .navbar {
@@ -95,6 +99,8 @@
   .navbar__search-form {
 	display: none;
   }
+
+
 }
 
 @include media-breakpoint-down(sm) {
