@@ -1,0 +1,159 @@
+[
+  {
+    "key": "group_580f4972569ad",
+    "title": "Avvikande datum",
+    "fields": [
+      {
+        "key": "field_580f4bcc3f47b",
+        "label": "Avvikande datum",
+        "name": "avvikande_datum",
+        "type": "repeater",
+        "instructions": "Ange datum och de nya öppnings- och stängningstiderna",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "",
+        "min": 0,
+        "max": 0,
+        "layout": "table",
+        "button_label": "Lägg till datum",
+        "sub_fields": [
+          {
+            "key": "field_580f4cfb6c9b9",
+            "label": "Datum",
+            "name": "datum",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "display_format": "Y-m-d",
+            "return_format": "Y-m-d",
+            "first_day": 1
+          },
+          {
+            "key": "field_580f4da02bfa9",
+            "label": "Tider",
+            "name": "tider",
+            "type": "repeater",
+            "instructions": "Ange öppnings- och stängningstider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Lägg till rad",
+            "sub_fields": [
+              {
+                "key": "field_580f4dca2bfaa",
+                "label": "Öppningstid",
+                "name": "oppningstid",
+                "type": "time_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                  "width": "",
+                  "class": "",
+                  "id": ""
+                },
+                "display_format": "H:i",
+                "return_format": "H:i"
+              },
+              {
+                "key": "field_580f4de92bfab",
+                "label": "Stängningstid",
+                "name": "stangningstid",
+                "type": "time_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                  "width": "",
+                  "class": "",
+                  "id": ""
+                },
+                "display_format": "H:i",
+                "return_format": "H:i"
+              }
+            ]
+          },
+          {
+            "key": "field_58204c56255fa",
+            "label": "Typ",
+            "name": "typ",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "choices": {
+              "oppet": "Öppet",
+              "stangt": "Stängt"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "oppet",
+            "layout": "vertical",
+            "return_format": "value"
+          },
+          {
+            "key": "field_5af1603487ce4",
+            "label": "Text",
+            "name": "text",
+            "type": "text",
+            "instructions": "Skriv eventuellt meddelande som visas som enda text under öppettiderna",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "event_location"
+        }
+      ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": ""
+  }
+]

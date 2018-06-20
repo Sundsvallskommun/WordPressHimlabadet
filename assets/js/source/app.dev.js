@@ -1,88 +1,77 @@
-(function($) {
-	"use strict";
-	$(document).ready(function() {
-		$('.dropdown-toggle').dropdown()
-		if( $('.widget-garbage-scheme').length > 0 ) {
+(function ($) {
+    "use strict";
 
-			$('#garbage-scheme-address').keypress(function (e) {
-				if (e.which == 13) {
-					$('#garbage-search-btn').click();
-					return false;
-				}
-			});
+    /**
+     * Resize facebook
+     */
+    var a = null;
+    $(window).resize(function () {
+        if (a !== null) {
+            clearTimeout(a);
+        }
 
-
-			$('.widget-garbage-scheme__response-close a').live('click', function () {
-				$(this).closest('.widget-garbage-scheme__response').hide();
-				$(this).closest('.widget-garbage-scheme').removeClass('active');
-				return false;
-			});
+        a = setTimeout(function () {
+            FB.XFBML.parse();
+        }, 1000)
+    });
 
 
+    $( function ()
+    {
 
 
-			$('#garbage-search-btn').live('click', function () {
-				var value = $('#garbage-scheme-address').val();
-				var wrapper = $('.widget-garbage-scheme');
+    var i = 1; // Total number of images
+    var n = 1; // the foot number (1-5)
+    var m = 1; // sequence indicator
+        var max_number_of_steps = 5;
+    var totalnumberofimg = 27;
 
-				$('#garbage-search-btn span').addClass('ajax-loader').html('&nbsp;');
+        var foot_array = [];
+        for (var iterator = 0; iterator < max_number_of_steps; iterator++) {
+            foot_array.push(null);
+        };
 
+        $('.animation__single[data-id=1]').addClass('animation__single--active');
+        foot_array[0] = $('.animation__single[data-id=1]');
 
-				var data = {
-					action: 'garbage_run',
-					address: value,
-					nonce: ajax_object.ajax_nonce
-				};
+        var totalnumberofimg = 27;
+        setTimeout(function () {
+            var myAnim = setInterval(function () {
+                foot_array.forEach(function (item, index) {
+                    if(item != null){
 
-				$.post(ajax_object.ajaxurl, data, function (response) {
+                        var next_index= parseInt($(item).attr('data-id')) +1;
+                        var next_sequence= parseInt($(item).attr('data-sequence')) +1;
+                        $(item).removeClass('animation__single--active');
+                        $(item).removeClass('animation__single--'+$(item).attr('data-sequence'));
+                        $(item).addClass('animation__single--'+next_sequence);
+                        $(item).attr('data-sequence', next_sequence)
+                        $('.animation__single[data-id='+next_index+']').addClass('animation__single--active');
 
-					//console.log( response );
+                        if($(item).attr('data-id') ==  totalnumberofimg-14 && max_number_of_steps >= $(item).attr('data-sequence') ){
+                            $('.animation__single[data-id=1]').addClass('animation__single--active');
 
-					if (response != 0) {
-						wrapper.addClass('active');
-						wrapper.find('.widget-garbage-scheme__response').html(response);
-						wrapper.find('.widget-garbage-scheme__response').show();
-					}
-					$('#garbage-search-btn span').removeClass('ajax-loader').html('Sök');
+                            foot_array[index+1]=$('.animation__single[data-id=1]');
 
-				}).error(function () {
-					alert("Problem calling: " + action + "\nCode: " + this.status + "\nException: " + this.statusText);
-				});
+                        }
+                        foot_array[index] = $('.animation__single[data-id='+next_index+']');
 
+                    };
 
-			});
+                });
+                if (i == totalnumberofimg * 5 - 3) {
+                    clearInterval(myAnim);
+                }
+                i++;
+            }, 52);
+        }, 1500);
 
-			var engine = new Bloodhound({
-				datumTokenizer: Bloodhound.tokenizers.obj.whitespace('street_address'),
-				queryTokenizer: Bloodhound.tokenizers.whitespace,
-				local: data
-
-			});
-			engine.initialize();
-
-			$('#garbage-scheme-address').typeahead({
-					minLength: 3,
-					highlight: true,
-
-				},
-				{
-					name: 'my-dataset',
-					display: 'street_address',
-					source: engine,
-					limit: 99,
-
-					templates: {
-						empty: '<p>Hittar inte angiven adress.</p>',
-						suggestion: function (data) {
-							return '<p>' + data.street_address + '</p>';
-						}
-					}
-
-				});
-
-		}
-	});
+    } );
 
 
+
+    /**
+     * End resize facebook
+     */
 
 })(jQuery);

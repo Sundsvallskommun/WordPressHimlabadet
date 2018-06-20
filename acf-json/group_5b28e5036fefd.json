@@ -1,0 +1,45 @@
+{
+    "key": "group_5b28e5036fefd",
+    "title": "Nyhetslänkning",
+    "fields": [
+        {
+            "key": "field_5b28e585c1740",
+            "label": "Länkas till",
+            "name": "redirect_to",
+            "type": "page_link",
+            "instructions": "Den kommer vara länken som man kommer till på startsidan när man klickar på nyheten.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1529406907
+}
