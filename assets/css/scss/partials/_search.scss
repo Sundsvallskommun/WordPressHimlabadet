@@ -177,11 +177,50 @@
 	  }
 	}
   }
+
+  &__item {
+    &--page {
+
+      .search-module__item__icon {
+        background: hb-color(orange);
+      }
+
+      svg {
+        fill: hb-color(orange);
+      }
+    }
+
+    &--attachment {
+
+      .search-module__item__icon {
+        background: hb-color(blue, 3);
+      }
+
+      svg {
+        fill: hb-color(blue, 3);
+      }
+    }
+
+    &--post {
+
+      .search-module__item__icon {
+        background: hb-color(green, 2);
+      }
+
+      svg {
+        fill: hb-color(green, 2);
+      }
+    }
+
+    &--contact_persons {
+
+      .search-module__item__icon {
+        background: #009ca3;
+      }
+
+      svg {
+        fill: #009ca3;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-

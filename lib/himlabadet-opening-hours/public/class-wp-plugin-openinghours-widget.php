@@ -268,6 +268,7 @@ class WP_Plugin_OpeningHours_Widget {
 
 
 		$day_number        = date_i18n( 'w', strtotime( $check_date ) );
+		$day_number				 = $day_number < 1 ? 7 : $day_number;
 
 		if ( is_array( $deviation_periods ) && count( $deviation_periods ) > 0 ) {
 

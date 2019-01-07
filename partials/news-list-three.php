@@ -1,5 +1,4 @@
 <?php
-
 if ( ! get_transient( 'header_content_news' ) ) {
 	$args        = array(
 		'posts_per_page' => 3,

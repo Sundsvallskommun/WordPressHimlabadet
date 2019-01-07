@@ -270,3 +270,34 @@ function get_post_thumbnail_alt( $post_id = null ) {
 
 	return get_image_alt( $thumbnail_id );
 }
+
+
+/**
+ * Update post transient when saving news.
+ *
+ * @since 1.0.0
+ * @author Sebastian Christiansson <sebastian@osynlig.se>
+ *
+ *
+ */
+
+function save_post_transient( $post_id ) {
+
+	$post_type = get_post_type($post_id);
+
+	if (wp_is_post_revision( $post_id ) || $post_type !== 'post') {
+		return;
+	}
+
+	$args = array(
+		'posts_per_page' => 3,
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+		'post_type'      => 'post',
+		'post_status'    => 'publish',
+	);
+	$posts_array = get_posts( $args );
+	set_transient( 'header_content_news', $posts_array, HOUR_IN_SECONDS );
+}
+
+add_action( 'save_post', 'save_post_transient');
