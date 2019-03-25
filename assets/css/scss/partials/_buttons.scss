@@ -7,6 +7,16 @@
   @extend .btn;
 }
 
+.gform_next_button {
+  @extend .btn-primary;
+  @extend .btn;
+}
+
+.gform_previous_button {
+  @extend .btn-secondary;
+  @extend .btn;
+}
+
 .btn-sm {
   padding: $btn-padding-y $btn-padding-x;
   border-radius: $btn-border-radius-sm;
