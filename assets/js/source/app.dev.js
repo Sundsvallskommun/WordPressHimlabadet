@@ -18,7 +18,12 @@
 
     $( function ()
     {
-
+    /*
+        Language fixes
+    */
+   $('.dropdown-menu').on('click', function (ev) {
+    ev.stopPropagation();
+   });
 
     var i = 1; // Total number of images
     var n = 1; // the foot number (1-5)

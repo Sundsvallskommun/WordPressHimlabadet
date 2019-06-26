@@ -46,6 +46,17 @@
 	<?php endif; ?>
 
 	<div class="container-fluid himlabadet-header__inner-container">
+		
+		<div class="nav-item dropdown">
+			<button class="btn btn-sm nav-link dropdown-toggle notranslate" lang="en" type="button" id="languageMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Language
+			</button>
+			<div class="dropdown-menu" aria-labelledby="languageMenuButton">
+				<p class="dropdown-header m-b-0" lang="en">Translate</p>
+				<p class="dropdown-item" lang="en" style="white-space: normal;"><small>Use Google to translate the web site. We take no responsibility for the accuracy of the translation.</small></p>
+				<div class="dropdown-item" id="google_translate_element"></div>
+			</div>
+		</div>
 
 		<?php $has_logo = function_exists( 'the_custom_logo' ) && has_custom_logo(); ?>
 
